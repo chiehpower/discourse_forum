@@ -71,15 +71,26 @@ createuser: error: could not connect to database template1: could not connect to
 ```
 
 ---
-### Skip this part.
+### Install discourse in docker-container
+
+Please follow here: https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md
+
 ```
-cd /workspace/discourse_development
-git clone https://github.com/discourse/discourse_docker.git discourse
-cd discourse
-cp samples/standalone.yml containers/childish.yml
+git clone https://github.com/discourse/discourse_docker.git /var/discourse
+cd /var/discourse
 ```
 
-https://meta.discourse.org/t/permission-denied-during-ubuntu-developer-setup/121371/3
+Go to `/samples/` to copy `standalone.yml` to `/containers/app.yml`
+Please amend the information about your server.
+
+Next,
+```
+ ./discourse-doctor
+```
+When you need to amend something, please dont forget to rebuild again.
+```
+./launcher rebuild app
+```
 
 ---
 # Reference
@@ -88,3 +99,8 @@ https://meta.discourse.org/t/permission-denied-during-ubuntu-developer-setup/121
 - [discourse github](https://github.com/discourse/discourse)
 - [INSTALL-cloud.md](https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md)
 - [discourse_docker github](https://github.com/discourse/discourse_docker)
+
+---
+# Some issues
+
+- [Permission denied during Ubuntu developer setup](https://meta.discourse.org/t/permission-denied-during-ubuntu-developer-setup/121371/3)
