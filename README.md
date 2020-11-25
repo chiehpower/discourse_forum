@@ -85,11 +85,11 @@ Please amend the information about your server.
 
 Next,
 ```
- ./discourse-doctor
+sudo ./discourse-doctor
 ```
 When you need to amend something, please dont forget to rebuild again.
 ```
-./launcher rebuild app
+sudo ./launcher rebuild app
 ```
 
 ---
@@ -99,6 +99,7 @@ When you need to amend something, please dont forget to rebuild again.
 - [discourse github](https://github.com/discourse/discourse)
 - [INSTALL-cloud.md](https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md)
 - [discourse_docker github](https://github.com/discourse/discourse_docker)
+- [Check the email server](https://www.ndchost.com/wiki/mail/test-smtp-auth-telnet)
 
 ---
 # Some issues
