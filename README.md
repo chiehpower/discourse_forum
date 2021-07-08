@@ -93,6 +93,33 @@ sudo ./launcher rebuild app
 ```
 
 ---
+# Move the forum from original server to other server
+
+[Update: 2021/07/08]
+
+Here is recording how to move your original forum to new device.
+
+In your new device, you git clone a new discourse repository and then copy your original app.yml which is in your `containers` folder. 
+
+Use `sudo ./launcher rebuild app` to rebuild it. Or you can install it from scratch. That's ok.
+
+The most important thing is to backup original forum via interface and download it. 
+
+![](./assets/backup.png)
+
+Then go to the newer original forum of new device.
+
+Login your account, and go to setting area to enable the restore function.
+
+![](./assets/enable_restore.png)
+
+Sequentially, go to `Backups` area to upload the backup file which you downloaded from original forum. Then click `Restore`.
+
+![](./assets/restore.png)
+
+After restore, done!!
+
+---
 # Reference
 
 - https://discourse.gitea.io/
